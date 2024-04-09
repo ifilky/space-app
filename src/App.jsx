@@ -5,8 +5,9 @@ import SideBar from "./componentes/SideBar";
 import Banner from "./componentes/Banner";
 import Gallery from "./componentes/Gallery";
 
-import fotos from "./fotos.json";
+import photos from "./fotos.json";
 import { useState } from "react";
+import ZoomModal from "./componentes/ZoomModal";
 
 const GradientBackground = styled.div`
   background: linear-gradient(
@@ -38,8 +39,9 @@ const GalleryContent = styled.section`
 
 const App = () => {
 
-  const [galleryPhotos,setGalleryPhotos] = useState(fotos);
-
+  const [galleryPhotos,setGalleryPhotos] = useState(photos);
+  const [selectedPhoto, setSelectedPhoto] = useState(null)
+  
   return (
     <GradientBackground>
       <GlobalStyles />
@@ -52,10 +54,13 @@ const App = () => {
               text="A galeria mais completa de fotos do espaço!"
               backgroundImage="/src/assets/banner.png"
             />
-            <Gallery photos={galleryPhotos} />
+            <Gallery
+              toSelectedPhoto={photo => setSelectedPhoto(photo)}
+              photos={galleryPhotos} />
           </GalleryContent>
         </MainContainer>
       </AppContainer>
+      <ZoomModal photo={selectedPhoto} toClose={() => setSelectedPhoto(null)}/>
     </GradientBackground>
   );
 }

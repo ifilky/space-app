@@ -5,26 +5,40 @@ import Popular from "./Popular";
 import Photo from "./Photo";
 
 const GalleryContainer = styled.div`
-    display: flex;
-`
-const FluidSection = styled.section`
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-`
+  display: flex;
+  gap: 24px;
+`;
 
-const Gallery = ({ photos }) => {
+const FluidSection = styled.section`
+  flex-grow: 1;
+`;
+
+const ImagesContainer = styled.section`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+`;
+
+const Gallery = ({ photos = [], toSelectedPhoto }) => {
   return (
     <>
       <Tags />
       <GalleryContainer>
         <FluidSection>
           <Title>Navegue pela galeria</Title>
-          {photos.map(photo => <Photo key={photo.id} photo={photo} >{photo.titulo}</Photo>)}
+          <ImagesContainer>
+            {photos.map((photo) => (
+              <Photo
+                toSelectedZoom={toSelectedPhoto}
+                key={photo.id}
+                photo={photo}>
+                {photo.titulo}
+              </Photo>
+            ))}
+          </ImagesContainer>
         </FluidSection>
-        <Popular>
-
-        </Popular>
+        <Popular></Popular>
       </GalleryContainer>
     </>
   );
