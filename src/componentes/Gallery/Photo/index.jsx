@@ -43,7 +43,7 @@ const Footer = styled.footer`
 
 const Photo = ({ photo, expanded = false, toSelectedZoom, toToggleFavorite }) => {
 
-  const favoriteIcon = photo.favorite ? "/public/icones/favorito-ativo.png" : "/public/icones/favorito.png"
+  const favoriteIcon = photo.favorite ? "/icones/favorito-ativo.png" : "/icones/favorito.png"
 
   return (
     <CardContainer $expanded={expanded} id={`foto-${photo.id}`}>
@@ -57,7 +57,7 @@ const Photo = ({ photo, expanded = false, toSelectedZoom, toToggleFavorite }) =>
           </IconButton>
           {!expanded && (
             <IconButton aria-hidden={expanded} onClick={() => toSelectedZoom(photo)}>
-              <img src="/public/icones/expandir.png" alt="Icone de expandir" />
+              <img src="/icones/expandir.png" alt="Icone de expandir" />
             </IconButton>
           )}
         </Footer>

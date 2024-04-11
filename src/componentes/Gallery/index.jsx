@@ -39,7 +39,7 @@ const Gallery = ({ photos = [], toSelectedPhoto, toToggleFavorite, setTag }) => 
             ))}
           </ImagesContainer>
         </FluidSection>
-        <Popular></Popular>
+        <Popular/>
       </GalleryContainer>
     </>
   );

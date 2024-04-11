@@ -36,18 +36,18 @@ const Footer = () => {
         <IconsDiv>
           <li>
             <a href="">
-              <img src="/public/icones/facebook.svg" alt="icone do facebook" />
+              <img src="/icones/facebook.svg" alt="icone do facebook" />
             </a>
           </li>
           <li>
             <a href="">
-              <img src="/public/icones/twitter.svg" alt="icone do twitter" />
+              <img src="/icones/twitter.svg" alt="icone do twitter" />
             </a>
           </li>
           <li>
             <a href="">
               <img
-                src="/public/icones/instagram.svg"
+                src="/icones/instagram.svg"
                 alt="icone do instagram"
               />
             </a>

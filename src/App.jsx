@@ -5,6 +5,7 @@ import SideBar from "./componentes/SideBar";
 import Banner from "./componentes/Banner";
 import Gallery from "./componentes/Gallery";
 import Footer from "./componentes/Footer"
+import bannerBackground from "./assets/banner.png"
 
 import photos from "./fotos.json";
 import { useEffect, useState } from "react";
@@ -86,7 +87,7 @@ const App = () => {
           <GalleryContent>
             <Banner
               text="A galeria mais completa de fotos do espaço!"
-              backgroundImage="/src/assets/banner.png"
+              backgroundImage={bannerBackground}
             />
             <Gallery
               toSelectedPhoto={(photo) => setSelectedPhoto(photo)}

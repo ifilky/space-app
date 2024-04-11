@@ -14,36 +14,36 @@ const SideBar = () => {
             <nav>
                 <StylizedList>
                     <NavigationItem
-                    iconeAtivo="/public/icones/home-ativo.png"
-                    iconeInativo="/public/icones/home-inativo.png"
+                    iconeAtivo="/icones/home-ativo.png"
+                    iconeInativo="/icones/home-inativo.png"
                     ativo={true}
                     >
                         Início
                     </NavigationItem>
                     <NavigationItem
-                    iconeAtivo="/public/icones/mais-vistas-ativo.png"
-                    iconeInativo="/public/icones/mais-vistas-inativo.png"
+                    iconeAtivo="/icones/mais-vistas-ativo.png"
+                    iconeInativo="/icones/mais-vistas-inativo.png"
                     ativo={false}
                     >
                         Mais vistas
                     </NavigationItem>
                     <NavigationItem
-                    iconeAtivo="/public/icones/mais-curtidas-ativo.png"
-                    iconeInativo="/public/icones/mais-curtidas-inativo.png"
+                    iconeAtivo="/icones/mais-curtidas-ativo.png"
+                    iconeInativo="/icones/mais-curtidas-inativo.png"
                     ativo={false}
                     >
                         Mais curtidas
                     </NavigationItem>
                     <NavigationItem
-                    iconeAtivo="/public/icones/novas-ativo.png"
-                    iconeInativo="/public/icones/novas-inativo.png"
+                    iconeAtivo="/icones/novas-ativo.png"
+                    iconeInativo="/icones/novas-inativo.png"
                     ativo={false}
                     >
                         Novas
                     </NavigationItem>
                     <NavigationItem
-                    iconeAtivo="/public/icones/surpreenda-me-ativo.png"
-                    iconeInativo="/public/icones/surpreenda-me-inativo.png"
+                    iconeAtivo="/icones/surpreenda-me-ativo.png"
+                    iconeInativo="/icones/surpreenda-me-inativo.png"
                     ativo={false}
                     >
                         Surpreenda-me  

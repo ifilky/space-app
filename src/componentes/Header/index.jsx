@@ -13,7 +13,7 @@ const StylizedHeader = styled.header`
 const Header = ({ filter, setFilter }) => {
     return (
         <StylizedHeader>
-            <img src="/public/images/logo.png" alt="logo do space app" />
+            <img src="/images/logo.png" alt="logo do space app" />
             <TextField
                 filter={filter}
                 setFilter={setFilter}
