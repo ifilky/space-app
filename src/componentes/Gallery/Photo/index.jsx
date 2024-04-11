@@ -41,7 +41,10 @@ const Footer = styled.footer`
   align-items: center;
 `;
 
-const Photo = ({ photo, expanded = false, toSelectedZoom }) => {
+const Photo = ({ photo, expanded = false, toSelectedZoom, toToggleFavorite }) => {
+
+  const favoriteIcon = photo.favorite ? "/public/icones/favorito-ativo.png" : "/public/icones/favorito.png"
+
   return (
     <CardContainer $expanded={expanded} id={`foto-${photo.id}`}>
       <img src={photo.path} alt={photo.alt} />
@@ -49,8 +52,8 @@ const Photo = ({ photo, expanded = false, toSelectedZoom }) => {
         <h3>{photo.titulo}</h3>
         <Footer>
           <h4>{photo.fonte}</h4>
-          <IconButton>
-            <img src="/public/icones/favorito.png" alt="Icone de favorito" />
+          <IconButton onClick={() => toToggleFavorite(photo)}>
+            <img src={favoriteIcon} alt="Icone de favorito" />
           </IconButton>
           {!expanded && (
             <IconButton aria-hidden={expanded} onClick={() => toSelectedZoom(photo)}>

@@ -33,7 +33,11 @@ const SearchIcon = styled.img`
 const TextField = (props) => {
     return (
         <StylizedContainer>
-            <TextInput placeholder="O que você procura?" {...props}/>
+            <TextInput
+                onChange={event => props.setFilter(event.target.value)}
+                placeholder="O que você procura?"
+                {...props}
+                />
             <SearchIcon src={search} alt="ícone de lupa" />
         </StylizedContainer>
     )
